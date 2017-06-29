@@ -6,7 +6,7 @@
 
 @ Goucher Digital Arts
 <br>Fall Residency, July-August 2016
-<br>Contact: [benjamin.taylor@goucher.edu](mailto:benjamin.taylor@goucher.edu)
+<br>Contact: [andrew.bernstein@goucher.edu](mailto:andrew.bernstein@goucher.edu)
 
 ~
 

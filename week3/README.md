@@ -1,1 +1,1 @@
-#### This day's tutorial will be shared during the residency.
+#### This weeks tutorial will focus on used for student directed topics and independent work on your final project.
