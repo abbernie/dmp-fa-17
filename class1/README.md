@@ -22,7 +22,7 @@ For a broader introduction, I encourage you to look through *Creative Code* by J
 
 ###### See McCarthy, Ch 2
 
-Our reference book will walk you through getting up and running with p5.js and the p5.js Editor (or another code editor).
+Our reference book will walk you through getting up and running with p5.js.
 
 
 
