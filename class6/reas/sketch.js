@@ -47,7 +47,3 @@ function draw() {
   }
   
 }
-
-function mousePressed(){
-  console.log(xs[1],xs[2]);
-}
