@@ -10,7 +10,11 @@ function setup() {
 
   for(var i = 0; i < 4; i++){
     var myline = new MovingLine(random(displayWidth), random(displayHeight), 
+<<<<<<< HEAD
       random(displayWidth), random(displayHeight));
+=======
+      random(displayWidth), random(displayHeight))
+>>>>>>> master
     lines.push(myline);
   }
 
@@ -56,8 +60,11 @@ MovingLine.prototype.update = function(){
   var x2 = this.x2;
   var y2 = this.y2;
 
+<<<<<<< HEAD
   console.log(x1);
 
+=======
+>>>>>>> master
   var x1b = this.x1b; 
   var y1b = this.y1b; 
   var x2b = this.x2b; 
