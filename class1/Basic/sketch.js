@@ -4,21 +4,24 @@
 function setup() {
   //Create and size a canvas (w, h)
   createCanvas(300,300);
+
+ 
+  //Draw a black background across the canvas
+  background(0);
+
+
   //Print to console for debugging
   console.log("Working so far");
 }
 
 function draw() {
   
-  //Draw a black background across the canvas
-  background(0);
-  
-  //Draw a rectangle with parameters x,y,width,height
+   //Draw a rectangle with parameters x,y,width,height
   rect(50,50,200,200);
   
   //Draw a circle that follows your mouse:
   fill(0,100,255);
-  ellipse(mouseX,mouseY,40,40);
+  ellipse(mouseX,mouseY,50,40);
   
 }
 
