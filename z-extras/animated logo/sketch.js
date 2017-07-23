@@ -8,12 +8,13 @@ function setup() {
   createCanvas(300,300);
   lines = new Array();
 
-  for(var i = 0; i < 3; i++){
+  for(var i = 0; i < 4; i++){
     var myline = new MovingLine(random(50, 200), random(50,200), 
       random(20,300), random(20,300));
     lines.push(myline);
-  }
 
+  }
+  print(lines);
 }
 
 function draw() {
@@ -24,11 +25,7 @@ function draw() {
     lines[i].draw();
   }
 
-
   inc = (inc + 1)%100;
-  console.log(inc);
-
-
   
 }
 
@@ -46,10 +43,10 @@ var MovingLine = function(x1,x2,y1,y2){
   this.y2 = y2;
 
 
-  this.x1b = 0; 
-  this.y1b = 0; 
-  this.x2b = 0; 
-  this.y2b = 0;
+    this.x1b = random(50,200);
+    this.y1b = random(50,200);
+    this.x2b = random(20,320);
+    this.y2b = random(20, 200);
 
 
 }
@@ -62,6 +59,7 @@ MovingLine.prototype.update = function(){
     this.x2b = random(20,320);
     this.y2b = random(20, 200);
     inc = 0;
+
   }
 
 
@@ -81,6 +79,10 @@ MovingLine.prototype.draw = function(){
   //Draw a rectangle with parameters x,y,width,height
   line(this.x1,this.y1,this.x2,this.y2);
 
+}
+
+function mousePressed(){
+  print(lines);
 }
 
 

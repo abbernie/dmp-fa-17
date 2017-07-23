@@ -8,10 +8,18 @@ function setup() {
   //Draw a black background across the canvas
   background(175);
 
+  // black diagnals
   for(i = displayWidth; i > -20; i-=25){
     for(j = 0; j < displayHeight; j+=5){
       fill(0);
       rect(i-j,j,10,5);
+    }
+  }
+
+  for(i = -1000; i < displayWidth+200; i+=125){
+    for(j = 0; j < displayHeight; j+=5){
+      fill(0);
+      rect(i+j,j,10,5);
     }
   }
 
@@ -27,12 +35,77 @@ function setup() {
       fill(175);
       rect(x,y,100,100);
 
+      push();
+        translate(x-25,y-25);
 
+        if(x == 25 && y == 25){
+          fill("#ff4500");
+        }
+
+        if(x == 150 && y == 25){
+          fill("#ff0000");
+        }
+
+        if(x == 275 && y == 25){
+          fill("#ff0000");
+        }
+
+        if(x == 25 && y == 150){
+          fill("#4169e1");
+        }
+
+        if(x == 150 && y == 150){
+          fill("#ff0000");
+        }
+
+        if(x == 275 && y == 150){
+          fill("#98fb98");
+        }
+
+        if(x == 25 && y == 275){
+          fill("#000080");
+        }
+
+        if(x == 150 && y == 275){
+          fill("#ff8c00");
+        }
+
+        if(x == 275 && y == 275){
+          fill("#ffffe0");
+        }
+
+        if(x == 25 && y == 400){
+          fill("#000080");
+        }
+
+        if(x == 150 && y == 400){
+          fill("#4169e1");
+        }
+
+        if(x == 275 && y == 400){
+          fill("#ff0000");
+        }
+
+        if(x == 25 && y == 525){
+          fill("#ff0000");
+        }
+
+        if(x == 150 && y == 525){
+          fill("#ff0000");
+        }
+
+        if(x == 275 && y == 525){
+          fill("#ffb6c1");
+        }
+
+
+        stripes(125,25);
+      pop();
 
     }
   }
 
-stripes(125,25);
+
 
 
 function stripes(xpos,ypos){
@@ -43,7 +116,6 @@ function stripes(xpos,ypos){
   for(i = 0; i < 100; i+=25){
     for(j = y; j < x1; j+=5){
 
-      fill(255,0,0);
       rect(i+j,j,10,5);
     }
     x1-=25;
@@ -53,7 +125,6 @@ function stripes(xpos,ypos){
 
   for(i = 0; i < x; i+=25){
     for(j = y; j < x1; j+=5){
-      fill(255,0,0);
       
       rect(j,i+j,10,5);
     }
