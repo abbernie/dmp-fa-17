@@ -8,6 +8,7 @@ function setup() {
   createCanvas(300,300);
   lines = new Array();
 
+<<<<<<< Updated upstream
   for(var i = 0; i < 4; i++){
     var myline = new MovingLine(random(50, 200), random(50,200), 
       random(20,300), random(20,300));
@@ -15,6 +16,14 @@ function setup() {
 
   }
   print(lines);
+=======
+  for(var i = 0; i < 3; i++){
+    var myline = new MovingLine(random(50, 200), random(50,200), 
+      random(20,300), random(20,300));
+    lines.push(myline);
+  }
+
+>>>>>>> Stashed changes
 }
 
 function draw() {
@@ -25,7 +34,15 @@ function draw() {
     lines[i].draw();
   }
 
+<<<<<<< Updated upstream
   inc = (inc + 1)%100;
+=======
+
+  inc = (inc + 1)%100;
+  console.log(inc);
+
+
+>>>>>>> Stashed changes
   
 }
 
@@ -59,6 +76,7 @@ MovingLine.prototype.update = function(){
     this.x2b = random(20,320);
     this.y2b = random(20, 200);
     inc = 0;
+<<<<<<< Updated upstream
 
   }
 
@@ -69,6 +87,17 @@ MovingLine.prototype.update = function(){
   this.y2 = lerp(this.y2,this.y2b,inc/400);
 
 
+=======
+  }
+
+
+  this.x1 = lerp(this.x1,this.x1b,inc/400);
+  this.y1 = lerp(this.y1,this.y1b,inc/400);
+  this.x2 = lerp(this.x2,this.x2b,inc/400);
+  this.y2 = lerp(this.y2,this.y2b,inc/400);
+
+
+>>>>>>> Stashed changes
 
 }
 
@@ -78,8 +107,11 @@ MovingLine.prototype.draw = function(){
   stroke(this.red, this.green, this.blue)
   //Draw a rectangle with parameters x,y,width,height
   line(this.x1,this.y1,this.x2,this.y2);
+<<<<<<< Updated upstream
 
 }
+=======
+>>>>>>> Stashed changes
 
 function mousePressed(){
   print(lines);

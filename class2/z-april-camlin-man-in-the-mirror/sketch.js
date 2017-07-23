@@ -8,7 +8,9 @@ function setup() {
   //Draw a black background across the canvas
   background(175);
 
+
   // black diagnals
+
   for(i = displayWidth; i > -20; i-=25){
     for(j = 0; j < displayHeight; j+=5){
       fill(0);
@@ -16,12 +18,14 @@ function setup() {
     }
   }
 
+
   for(i = -1000; i < displayWidth+200; i+=125){
     for(j = 0; j < displayHeight; j+=5){
       fill(0);
       rect(i+j,j,10,5);
     }
   }
+
 
   //grey squares
 
@@ -34,6 +38,7 @@ function setup() {
       noStroke();
       fill(175);
       rect(x,y,100,100);
+
 
       push();
         translate(x-25,y-25);
@@ -102,6 +107,7 @@ function setup() {
         stripes(125,25);
       pop();
 
+
     }
   }
 
@@ -116,6 +122,7 @@ function stripes(xpos,ypos){
   for(i = 0; i < 100; i+=25){
     for(j = y; j < x1; j+=5){
 
+
       rect(i+j,j,10,5);
     }
     x1-=25;
@@ -125,6 +132,7 @@ function stripes(xpos,ypos){
 
   for(i = 0; i < x; i+=25){
     for(j = y; j < x1; j+=5){
+
       
       rect(j,i+j,10,5);
     }
