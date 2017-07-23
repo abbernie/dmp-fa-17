@@ -2,15 +2,21 @@
 
 // the (x,y) coordinates of our line
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 var x1a = 50;
 var y1a = 200;
 var x2a = 50;
 var y2a = 65;
 =======
+=======
+>>>>>>> Stashed changes
 var x1 = 50;
 var x2 = 50;
 var y1 = 200;
 var y2 = 65;
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 
@@ -27,13 +33,17 @@ function setup() {
   //Create and size a canvas (w, h)
   createCanvas(300,300);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   frameRate(30);
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 
 }
 
 function draw() {
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
   // draw the background white
   background(255);
@@ -44,10 +54,16 @@ function draw() {
 
   if(inc == 0){
 >>>>>>> Stashed changes
+=======
+  background(255);
+
+  if(inc == 0){
+>>>>>>> Stashed changes
     x1b = random(50,200);
     y1b = random(50,200);
     x2b = random(20,320);
     y2b = random(20, 200);
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 
     inc = 0;
@@ -62,6 +78,8 @@ function draw() {
   strokeWeight(3);
   line(x1a,y1a,x2a,y2a);
 =======
+=======
+>>>>>>> Stashed changes
   }
 
 
@@ -72,6 +90,9 @@ function draw() {
 
   strokeWeight(3);
   line(this.x1,this.y1,this.x2,this.y2);
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 
@@ -83,6 +104,7 @@ function draw() {
 }
 
 
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 // function draw(){
 
@@ -106,6 +128,8 @@ function draw() {
 // }
 
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 

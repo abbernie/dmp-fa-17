@@ -9,6 +9,7 @@ function setup() {
   lines = new Array();
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   for(var i = 0; i < 4; i++){
     var myline = new MovingLine(random(50, 200), random(50,200), 
       random(20,300), random(20,300));
@@ -17,12 +18,17 @@ function setup() {
   }
   print(lines);
 =======
+=======
+>>>>>>> Stashed changes
   for(var i = 0; i < 3; i++){
     var myline = new MovingLine(random(50, 200), random(50,200), 
       random(20,300), random(20,300));
     lines.push(myline);
   }
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 }
 
@@ -35,8 +41,11 @@ function draw() {
   }
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   inc = (inc + 1)%100;
 =======
+=======
+>>>>>>> Stashed changes
 
   inc = (inc + 1)%100;
   console.log(inc);
@@ -77,6 +86,7 @@ MovingLine.prototype.update = function(){
     this.y2b = random(20, 200);
     inc = 0;
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
   }
 
@@ -88,6 +98,8 @@ MovingLine.prototype.update = function(){
 
 
 =======
+=======
+>>>>>>> Stashed changes
   }
 
 
@@ -97,6 +109,9 @@ MovingLine.prototype.update = function(){
   this.y2 = lerp(this.y2,this.y2b,inc/400);
 
 
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 
 }
@@ -108,8 +123,11 @@ MovingLine.prototype.draw = function(){
   //Draw a rectangle with parameters x,y,width,height
   line(this.x1,this.y1,this.x2,this.y2);
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 }
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 

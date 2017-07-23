@@ -8,9 +8,12 @@ function setup() {
   //Draw a black background across the canvas
   background(175);
 
+<<<<<<< Updated upstream
 
   // black diagnals
 
+=======
+>>>>>>> Stashed changes
   for(i = displayWidth; i > -20; i-=25){
     for(j = 0; j < displayHeight; j+=5){
       fill(0);
@@ -18,6 +21,7 @@ function setup() {
     }
   }
 
+<<<<<<< Updated upstream
 
   for(i = -1000; i < displayWidth+200; i+=125){
     for(j = 0; j < displayHeight; j+=5){
@@ -27,6 +31,8 @@ function setup() {
   }
 
 
+=======
+>>>>>>> Stashed changes
   //grey squares
 
 
@@ -40,6 +46,7 @@ function setup() {
       rect(x,y,100,100);
 
 
+<<<<<<< Updated upstream
       push();
         translate(x-25,y-25);
 
@@ -107,11 +114,17 @@ function setup() {
         stripes(125,25);
       pop();
 
+=======
+>>>>>>> Stashed changes
 
     }
   }
 
+<<<<<<< Updated upstream
 
+=======
+stripes(125,25);
+>>>>>>> Stashed changes
 
 
 function stripes(xpos,ypos){
@@ -122,7 +135,11 @@ function stripes(xpos,ypos){
   for(i = 0; i < 100; i+=25){
     for(j = y; j < x1; j+=5){
 
+<<<<<<< Updated upstream
 
+=======
+      fill(255,0,0);
+>>>>>>> Stashed changes
       rect(i+j,j,10,5);
     }
     x1-=25;
@@ -132,7 +149,11 @@ function stripes(xpos,ypos){
 
   for(i = 0; i < x; i+=25){
     for(j = y; j < x1; j+=5){
+<<<<<<< Updated upstream
 
+=======
+      fill(255,0,0);
+>>>>>>> Stashed changes
       
       rect(j,i+j,10,5);
     }
