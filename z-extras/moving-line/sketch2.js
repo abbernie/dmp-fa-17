@@ -1,77 +1,82 @@
-
-var x1a, y1a, x2a, y2a, x3a, y3a;
-var x1b, y1b, x2b, y2b, x3b, y3b;
-
-var ran1, ran2, ran3, ran4, ran5, ran6;
-
-var inc = 0;
-
-var colora, colorb;
+var triangles = [];
 
 function setup(){
-	createCanvas(720,1080);
-	x1a = 30;
-	y1a = 50;
-	x2a = 40;
-	y2a = 55;
-	x3a = 60;
-	y3a = 80;
+	createCanvas(displayWidth,displayHeight);
 
-	x1b = random(50,75);
-	y1b = random(200,500);
-	x2b = random(100, 500);
-	y2b = random(300, 915);
-	x3b = random(100,650);
-	y3b = random(300,1080);
-
-	ran1 = random(255);
-	ran2 = random(255);
-	ran3 = random(255);
-	ran4 = random(255);
-	ran5 = random(255);
-	ran6 = random(255);
-
-
-	colora = color(random(255),random(255),random(255),random(255));
-	colorb = color(random(255),random(255),random(255),random(255));
-
-
+	for(var i = 0; i < 10; i++){
+		triangles.push(new MyTriangle());
+	}
+	
 }
 
 function draw(){
 	background(255);
 
-	if(mouseIsPressed){
-		x1b = random(50,75);
-		y1b = random(200,500);
-		x2b = random(100, 500);
-		y2b = random(300, 915);
-		x3b = random(100,650);
-		y3b = random(300,1080);
-
-		ran1 = random(255);
-		ran2 = random(255);
-		ran3 = random(255);
-		ran4 = random(255);
-		ran5 = random(255);
-		ran6 = random(255);
-
-		inc = 0;
+	for(var i = 0; i < triangles.length; i++){
+		triangles[i].update();
+		triangles[i].draw();
 	}
 
-	x1a = lerp(x1a, x1b, inc/100);
-	y1a = lerp(y1a, y1b, inc/100);
-	x2a = lerp(x2a, x2b, inc/100);
-	y2a = lerp(y2a, y2b, inc/100);
-	x3a = lerp(x3a, x3b, inc/100);
-	y3a = lerp(y3a, y3b, inc/100);
-
-	fill(colora);
-	triangle(x1a,y1a,x2a,y2a,x3a,y3a);
-
-	fill(colorb);
-	triangle(x1a+ran1,y1a+ran2,x2a+ran3,y2a+ran4,x3a+ran5,y3a+ran6);
-
-	inc = (inc + 1)%100;
 	
 }
+
+var MyTriangle = function(){
+
+ this.x1a = 30; 
+ this.y1a = 50;
+ this.x2a = 40;
+ this.y2a = 55;
+ this.x3a = 60;
+ this.y3a = 80;
+ 
+ this.x1b = random(0,displayWidth);
+ this.y1b = random(0,displayHeight);
+ this.x2b = random(0, displayWidth);
+ this.y2b = random(0, displayHeight); 
+ this.x3b = random(0,displayWidth); 
+ this.y3b = random(0,displayHeight);
+
+ this.inc = 0;
+
+ this.myColor = color(random(255), random(255), random(255), random(255));
+
+}
+
+MyTriangle.prototype.update = function(){
+
+	if(mouseIsPressed){
+		this.x1b = random(50,75);
+		this.y1b = random(200,500);
+		this.x2b = random(100, 500);
+		this.y2b = random(300, 915);
+		this.x3b = random(100,650);
+		this.y3b = random(300,1080);
+
+		this.inc = 0;
+	}
+
+	this.x1a = lerp(this.x1a, this.x1b, this.inc/100);
+	this.y1a = lerp(this.y1a, this.y1b, this.inc/100);
+	this.x2a = lerp(this.x2a, this.x2b, this.inc/100);
+	this.y2a = lerp(this.y2a, this.y2b, this.inc/100);
+	this.x3a = lerp(this.x3a, this.x3b, this.inc/100);
+	this.y3a = lerp(this.y3a, this.y3b, this.inc/100);
+
+	this.inc = (this.inc + 1)%100;
+
+}
+
+MyTriangle.prototype.draw = function(){
+
+	fill(this.myColor);
+	triangle(this.x1a,this.y1a,this.x2a,this.y2a,this.x3a,this.y3a);
+
+}
+
+
+
+
+
+
+
+

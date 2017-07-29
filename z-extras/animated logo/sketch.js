@@ -8,28 +8,19 @@ function setup() {
   createCanvas(300,300);
   lines = new Array();
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  for(var i = 0; i < 4; i++){
+  for(var i = 0; i < 50; i++){
     var myline = new MovingLine(random(50, 200), random(50,200), 
       random(20,300), random(20,300));
     lines.push(myline);
 
   }
-  print(lines);
-=======
-=======
->>>>>>> Stashed changes
-  for(var i = 0; i < 3; i++){
-    var myline = new MovingLine(random(50, 200), random(50,200), 
-      random(20,300), random(20,300));
-    lines.push(myline);
-  }
+  // print(lines);
 
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+  // for(var i = 0; i < 3; i++){
+  //   var myline = new MovingLine(random(50, 200), random(50,200), 
+  //     random(20,300), random(20,300));
+  //   lines.push(myline);
+  // }
 }
 
 function draw() {
@@ -40,18 +31,7 @@ function draw() {
     lines[i].draw();
   }
 
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
   inc = (inc + 1)%100;
-=======
-=======
->>>>>>> Stashed changes
-
-  inc = (inc + 1)%100;
-  console.log(inc);
-
-
->>>>>>> Stashed changes
   
 }
 
@@ -85,11 +65,9 @@ MovingLine.prototype.update = function(){
     this.x2b = random(20,320);
     this.y2b = random(20, 200);
     inc = 0;
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
 
   }
-
 
   this.x1 = lerp(this.x1,this.x1b,inc/400);
   this.y1 = lerp(this.y1,this.y1b,inc/400);
@@ -97,22 +75,6 @@ MovingLine.prototype.update = function(){
   this.y2 = lerp(this.y2,this.y2b,inc/400);
 
 
-=======
-=======
->>>>>>> Stashed changes
-  }
-
-
-  this.x1 = lerp(this.x1,this.x1b,inc/400);
-  this.y1 = lerp(this.y1,this.y1b,inc/400);
-  this.x2 = lerp(this.x2,this.x2b,inc/400);
-  this.y2 = lerp(this.y2,this.y2b,inc/400);
-
-
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
 }
 
@@ -122,14 +84,10 @@ MovingLine.prototype.draw = function(){
   stroke(this.red, this.green, this.blue)
   //Draw a rectangle with parameters x,y,width,height
   line(this.x1,this.y1,this.x2,this.y2);
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
 
 }
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
+
 
 function mousePressed(){
   print(lines);
